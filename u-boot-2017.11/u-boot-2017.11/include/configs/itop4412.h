@@ -68,7 +68,7 @@
 	"dtb_addr=0x41000000\0" \
 	"dtb_name=exynos4412-itop-elite.dtb\0" \
 	"loadbootenv=load mmc ${mmcdev} ${loadaddr} ${bootenv}\0" \
-	"bootargs=root=/dev/mmcblk1p2 rw console=ttySAC2,115200 init=/linuxrc earlyprintk\0" \
+	"bootargs=root=/dev/mmcblk1p2 rw console=ttySAC2,115200 init=/lib/systemd/systemd earlyprintk\0" \
 	"importbootenv=echo Importing environment from mmc ...; " \
 	"env import -t $loadaddr $filesize\0" \
     "loadbootscript=load mmc ${mmcdev} ${loadaddr} boot.scr\0" \
