@@ -338,15 +338,15 @@ int do_mmc_write(cmd_tbl_t *cmdtp, int flag,
 	if (!mmc)
 		return CMD_RET_FAILURE;
 
-	printf("\nMMC write: dev # %d, block # %d, count %d ... ",
-	       curr_device, blk, cnt);
+	//printf("\nMMC write: dev # %d, block # %d, count %d ... ",
+	  //     curr_device, blk, cnt);
 
 	if (mmc_getwp(mmc) == 1) {
 		printf("Error: card is write protected!\n");
 		return CMD_RET_FAILURE;
 	}
 	n = blk_dwrite(mmc_get_blk_desc(mmc), blk, cnt, addr);
-	printf("%d blocks written: %s\n", n, (n == cnt) ? "OK" : "ERROR");
+	//printf("%d blocks written: %s\n", n, (n == cnt) ? "OK" : "ERROR");
 
 	return (n == cnt) ? CMD_RET_SUCCESS : CMD_RET_FAILURE;
 }

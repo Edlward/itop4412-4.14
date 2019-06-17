@@ -670,7 +670,7 @@ static void cb_flash(struct usb_ep *ep, struct usb_request *req)
 {
 	char *cmd = req->buf;
 	char response[FASTBOOT_RESPONSE_LEN];
-
+	printf("mhwuboot---%s---\n",cmd);
 	char *argv[2]  = { "md","40000000"};
         char *open_emmc[2]  = { "open","   "};
         char *close_emmc[2]  = { "close","   "};
@@ -684,8 +684,8 @@ static void cb_flash(struct usb_ep *ep, struct usb_request *req)
         //char run_cmd[64];
 
         unsigned int addr = 0x40000000;
-        unsigned int start_8G = 0xaeed;
-        unsigned int start_16G = 0x8000;
+        unsigned int start_8G = 0x91aa;
+        unsigned int start_16G = 0x91aa;
 
         cmdtp.name = &value;
         cmdtp.maxargs = 29;
