@@ -339,7 +339,7 @@
 	pinctrl-names = "default";
 	cd-gpio = <&gpx0 7 GPIO_ACTIVE_LOW>;
 	cap-sd-highspeed;
-	/*vmmc-supply = <&ldo23_reg>;
-	vqmmc-supply = <&ldo17_reg>;*/
+	vmmc-supply = <&ldo23_reg>;
+	vqmmc-supply = <&ldo17_reg>;
 	status = "okay";
 };
